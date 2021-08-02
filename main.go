@@ -95,7 +95,7 @@ func main() {
 func run(c *cli.Context) error {
 	parseEnvFile()
 	rabbitConfig := amqp.Config{
-		AMQPUrl: "amqps://futohrkk:Qq4imfTpgcDawG6bzuSnJALRg-a6xqZl@toad.rmq.cloudamqp.com/futohrkk",
+		AMQPUrl:  "amqps://futohrkk:Qq4imfTpgcDawG6bzuSnJALRg-a6xqZl@toad.rmq.cloudamqp.com/futohrkk",
 		LogLevel: 5,
 	}
 	serverConfig := amqp.ServerConfig{
