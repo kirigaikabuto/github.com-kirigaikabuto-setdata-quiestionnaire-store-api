@@ -11,3 +11,9 @@ clean:
 
 heroku: $(DOCKER_CMD)
 	heroku container:push web
+
+deploy:
+		git add .
+		git commit -m "sdsdsd"
+		git push origin master
+		git push hekoru master

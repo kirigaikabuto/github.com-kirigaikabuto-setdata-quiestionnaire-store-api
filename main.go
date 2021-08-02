@@ -126,7 +126,7 @@ func run(c *cli.Context) error {
 	}
 	questionService := setdata_questionnaire_store.NewQuestionsService(questionPostgreStore)
 	questionsAmqpEndpoints := setdata_questionnaire_store.NewQuestionsAmqpEndpoints(setdata_common.NewCommandHandler(questionService))
-	//srv.Endpoint("questions.create", questionsAmqpEndpoints.MakeCreateQuestionAmqpEndpoint())
+	srv.Endpoint("questions.create", questionsAmqpEndpoints.MakeCreateQuestionAmqpEndpoint())
 	srv.Endpoint("questions.delete", questionsAmqpEndpoints.MakeDeleteQuestionAmqpEndpoint())
 	srv.Endpoint("questions.update", questionsAmqpEndpoints.MakeUpdateQuestionAmqpEndpoint())
 	srv.Endpoint("questions.list", questionsAmqpEndpoints.MakeListQuestionAmqpEndpoint())
