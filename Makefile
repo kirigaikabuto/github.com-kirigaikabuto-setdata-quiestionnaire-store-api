@@ -16,4 +16,4 @@ deploy:
 		git add .
 		git commit -m "sdsdsd"
 		git push origin master
-		git push hekoru master
+		git push heroku master
