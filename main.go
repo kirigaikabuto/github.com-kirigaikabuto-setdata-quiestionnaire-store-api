@@ -45,31 +45,31 @@ func parseEnvFile() {
 	if amqpHost == "" {
 		amqpHost = "localhost"
 	}
-	postgresUser = os.Getenv("POSTGRES_USER")
-	postgresPassword = os.Getenv("POSTGRES_PASSWORD")
-	postgresDatabaseName = os.Getenv("POSTGRES_DATABASE")
-	postgresParams = os.Getenv("POSTGRES_PARAMS")
-	portStr := os.Getenv("POSTGRES_PORT")
-	postgresPort, _ = strconv.Atoi(portStr)
-	postgresHost = os.Getenv("POSTGRES_HOST")
-	if postgresHost == "" {
-		postgresHost = "localhost"
-	}
-	if postgresPort == 0 {
-		postgresPort = 5432
-	}
-	if postgresUser == "" {
-		postgresUser = "setdatauser"
-	}
-	if postgresPassword == "" {
-		postgresPassword = "123456789"
-	}
-	if postgresDatabaseName == "" {
-		postgresDatabaseName = "setdata"
-	}
-	if postgresParams == "" {
-		//postgresParams = "sslmode=disable"
-	}
+	//postgresUser = os.Getenv("POSTGRES_USER")
+	//postgresPassword = os.Getenv("POSTGRES_PASSWORD")
+	//postgresDatabaseName = os.Getenv("POSTGRES_DATABASE")
+	//postgresParams = os.Getenv("POSTGRES_PARAMS")
+	//portStr := os.Getenv("POSTGRES_PORT")
+	//postgresPort, _ = strconv.Atoi(portStr)
+	//postgresHost = os.Getenv("POSTGRES_HOST")
+	//if postgresHost == "" {
+	//	postgresHost = "localhost"
+	//}
+	//if postgresPort == 0 {
+	//	postgresPort = 5432
+	//}
+	//if postgresUser == "" {
+	//	postgresUser = "setdatauser"
+	//}
+	//if postgresPassword == "" {
+	//	postgresPassword = "123456789"
+	//}
+	//if postgresDatabaseName == "" {
+	//	postgresDatabaseName = "setdata"
+	//}
+	//if postgresParams == "" {
+	//	//postgresParams = "sslmode=disable"
+	//}
 }
 
 func main() {
