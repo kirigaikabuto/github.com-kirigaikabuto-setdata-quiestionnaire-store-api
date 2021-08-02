@@ -1,1 +1,1 @@
-web: bin/setdata-quiestionnaire-store-api
+worker: bin/setdata-quiestionnaire-store-api
