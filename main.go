@@ -16,10 +16,10 @@ var (
 	version              = "0.0.0"
 	amqpHost             = ""
 	amqpPort             = 0
-	postgresUser         = ""
-	postgresPassword     = ""
-	postgresDatabaseName = ""
-	postgresHost         = ""
+	postgresUser         = "oaxlkqvpikdard"
+	postgresPassword     = "79a272cdf4249041aa90183895ff92d9b2d1e6bd69cd5165552f98c6f0e634bd"
+	postgresDatabaseName = "dd4k5rjp3rmvg1"
+	postgresHost         = "ec2-44-194-54-123.compute-1.amazonaws.com"
 	postgresPort         = 5432
 	postgresParams       = ""
 	flags                = []cli.Flag{
