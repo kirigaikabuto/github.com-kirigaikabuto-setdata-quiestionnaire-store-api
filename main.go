@@ -68,7 +68,7 @@ func parseEnvFile() {
 		postgresDatabaseName = "setdata"
 	}
 	if postgresParams == "" {
-		postgresParams = "sslmode=disable"
+		//postgresParams = "sslmode=disable"
 	}
 }
 
