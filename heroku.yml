@@ -5,4 +5,4 @@ build:
     - go
 
 run:
-  worker: setdata-quiestionnaire-store-api
+  web: setdata-quiestionnaire-store-api
