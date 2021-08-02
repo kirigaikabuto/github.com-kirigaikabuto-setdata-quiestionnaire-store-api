@@ -73,6 +73,10 @@ func parseEnvFile() {
 }
 
 func main() {
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
 	app := cli.NewApp()
 	app.Name = "Set data questions api"
 	app.Description = ""
