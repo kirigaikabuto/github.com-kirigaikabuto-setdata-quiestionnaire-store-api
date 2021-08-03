@@ -131,6 +131,19 @@ func run(c *cli.Context) error {
 	srv.Endpoint("questions.update", questionsAmqpEndpoints.MakeUpdateQuestionAmqpEndpoint())
 	srv.Endpoint("questions.list", questionsAmqpEndpoints.MakeListQuestionAmqpEndpoint())
 	srv.Endpoint("questions.get", questionsAmqpEndpoints.MakeGetQuestionAmqpEndpoint())
+	//questionnaire
+	questionnairePostgreStore, err := setdata_questionnaire_store.NewQuestionnairePostgresStore(cfg)
+	if err != nil {
+		return err
+	}
+	questionnaireService := setdata_questionnaire_store.NewQuestionnaireService(questionnairePostgreStore)
+	questionnaireAmqpEndpoints := setdata_questionnaire_store.NewQuestionnaireAmqpEndpoints(setdata_common.NewCommandHandler(questionnaireService))
+	srv.Endpoint("questionnaire.create", questionnaireAmqpEndpoints.MakeCreateQuestionnaireAmqpEndpoint())
+	srv.Endpoint("questionnaire.list", questionnaireAmqpEndpoints.MakeListQuestionnaireAmqpEndpoint())
+	srv.Endpoint("questionnaire.update", questionnaireAmqpEndpoints.MakeUpdateQuestionnaireAmqpEndpoint())
+	srv.Endpoint("questionnaire.getById", questionnaireAmqpEndpoints.MakeGetByIdQuestionnaireAmqpEndpoint())
+	srv.Endpoint("questionnaire.getByName", questionnaireAmqpEndpoints.MakeGetByNameQuestionnaireAmqpEndpoint())
+	srv.Endpoint("questionnaire.delete", questionnaireAmqpEndpoints.MakeDeleteQuestionnaireAmqpEndpoint())
 	err = srv.Start()
 	if err != nil {
 		return err
