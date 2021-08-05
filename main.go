@@ -153,7 +153,7 @@ func run(c *cli.Context) error {
 	ordersAmqpEndpoints := setdata_questionnaire_store.NewOrderAmqpEndpoints(setdata_common.NewCommandHandler(ordersService))
 	srv.Endpoint("orders.create", ordersAmqpEndpoints.MakeCreateOrderAmqpEndpoint())
 	srv.Endpoint("orders.list", ordersAmqpEndpoints.MakeListOrderAmqpEndpoint())
-	err = srv.Start()
+
 	//telegram
 	telegramPostgresStore, err := setdata_questionnaire_store.NewPostgresTelegramStore(cfg)
 	if err != nil {
@@ -168,6 +168,9 @@ func run(c *cli.Context) error {
 	srv.Endpoint("telegram.sendMessage", telegramAmqpEndpoints.SendMessageTelegramBotAmqpEndpoint())
 	srv.Endpoint("telegram.create", telegramAmqpEndpoints.CreateTelegramBotAmqpEndpoint())
 	srv.Endpoint("telegram.list", telegramAmqpEndpoints.ListTelegramBotAmqpEndpoint())
+
+	err = srv.Start()
+
 	if err != nil {
 		return err
 	}
