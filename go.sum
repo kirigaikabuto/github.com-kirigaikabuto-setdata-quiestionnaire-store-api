@@ -18,6 +18,8 @@ github.com/kirigaikabuto/setdata-questionnaire-store v0.0.2-0.20210803155303-9c4
 github.com/kirigaikabuto/setdata-questionnaire-store v0.0.2-0.20210803155303-9c4653faf9c6/go.mod h1:6oiwi+08Ql5SR7JExzWatMx1+jaFwlSaenLof+XtL8g=
 github.com/kirigaikabuto/setdata-questionnaire-store v0.0.2-0.20210805163007-3e9b337754c2 h1:2XoM3wYyZtsWrrE7WbCX6ngvJD2/XIbpd/TUlRV6Auc=
 github.com/kirigaikabuto/setdata-questionnaire-store v0.0.2-0.20210805163007-3e9b337754c2/go.mod h1:6oiwi+08Ql5SR7JExzWatMx1+jaFwlSaenLof+XtL8g=
+github.com/kirigaikabuto/setdata-questionnaire-store v0.0.2-0.20210805165005-8250d34eacae h1:OHDdxSKsy6yJgJ6sYgun1eFRJP1K7CL0+9Uw/7syhfM=
+github.com/kirigaikabuto/setdata-questionnaire-store v0.0.2-0.20210805165005-8250d34eacae/go.mod h1:6oiwi+08Ql5SR7JExzWatMx1+jaFwlSaenLof+XtL8g=
 github.com/konsorten/go-windows-terminal-sequences v0.0.0-20180402223658-b729f2633dfe h1:CHRGQ8V7OlCYtwaKPJi3iA7J+YdNKdo8j7nG5IgDhjs=
 github.com/konsorten/go-windows-terminal-sequences v0.0.0-20180402223658-b729f2633dfe/go.mod h1:T0+1ngSBFLxvqU3pZ+m/2kptfBszLMUkC4ZK/EgS/cQ=
 github.com/lib/pq v1.10.2 h1:AqzbZs4ZoCBp+GtejcpCpcxM3zlSMx29dXbUSeVtJb8=
