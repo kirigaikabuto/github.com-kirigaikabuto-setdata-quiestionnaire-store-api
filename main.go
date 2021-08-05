@@ -144,6 +144,15 @@ func run(c *cli.Context) error {
 	srv.Endpoint("questionnaire.getById", questionnaireAmqpEndpoints.MakeGetByIdQuestionnaireAmqpEndpoint())
 	srv.Endpoint("questionnaire.getByName", questionnaireAmqpEndpoints.MakeGetByNameQuestionnaireAmqpEndpoint())
 	srv.Endpoint("questionnaire.delete", questionnaireAmqpEndpoints.MakeDeleteQuestionnaireAmqpEndpoint())
+	//orders
+	ordersPostgreStore, err := setdata_questionnaire_store.NewOrderPostgresStore(cfg)
+	if err != nil {
+		return err
+	}
+	ordersService := setdata_questionnaire_store.NewOrderService(ordersPostgreStore)
+	ordersAmqpEndpoints := setdata_questionnaire_store.NewOrderAmqpEndpoints(setdata_common.NewCommandHandler(ordersService))
+	srv.Endpoint("orders.create", ordersAmqpEndpoints.MakeCreateOrderAmqpEndpoint())
+	srv.Endpoint("orders.list", ordersAmqpEndpoints.MakeListOrderAmqpEndpoint())
 	err = srv.Start()
 	if err != nil {
 		return err
